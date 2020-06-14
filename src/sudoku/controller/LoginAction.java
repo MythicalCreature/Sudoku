@@ -46,7 +46,7 @@ public class LoginAction {
             if (curUser != null) {
                 JOptionPane.showMessageDialog(c, "登录成功");
                 frame.dispose();
-                new GameFrame().setVisible(true);
+                new GameFrame(userName).setVisible(true);
             } else {
                 JOptionPane.showMessageDialog(c, "用户名或密码错误");
             }

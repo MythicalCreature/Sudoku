@@ -18,5 +18,6 @@ public class CellUtils extends JButton {
         setFont(new Font("楷体", Font.BOLD, 24));
         //设置单元格背景色
         setBackground(Color.white);
+        setText("-1");
     }
 }

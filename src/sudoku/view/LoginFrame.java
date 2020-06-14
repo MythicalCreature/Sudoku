@@ -5,8 +5,6 @@ import sudoku.controller.MouseAction;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.net.URL;
 
 /**
@@ -32,7 +30,8 @@ public class LoginFrame {
     private JFrame frame = new JFrame();
     private Container c = frame.getContentPane();
     private LoginAction la = new LoginAction(frame);
-
+    public static String userName;
+    private static String password;
     /**
      * 默认构造器
      */
@@ -58,8 +57,8 @@ public class LoginFrame {
      */
     private void setLogin() {
         btnLogin.addActionListener(e -> {
-            String userName = jtfUserName.getText();
-            String password = new String(jtfPassword.getPassword());
+            userName = jtfUserName.getText();
+            password = new String(jtfPassword.getPassword());
             //设置登录所需事件
             la.getLogin(userName,password);
         });
@@ -70,8 +69,8 @@ public class LoginFrame {
      */
     private void setRegister() {
         btnRegister.addActionListener(e -> {
-            String userName = jtfUserName.getText();
-            String password = new String(jtfPassword.getPassword());
+            userName = jtfUserName.getText();
+            password = new String(jtfPassword.getPassword());
             //设置注册所需事件
             la.getRegister(userName,password);
             //清空输入框
