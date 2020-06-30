@@ -221,6 +221,8 @@ public class GameFrame extends JFrame {
                     } else if (n == JOptionPane.NO_OPTION) {
                         setDefaultCloseOperation(EXIT_ON_CLOSE);
                     }
+                }else{
+                    setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
                 }
             }
         });

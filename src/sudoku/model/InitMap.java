@@ -11,6 +11,7 @@ public class InitMap {
     private static final int LEVEL_MAX = 10;
     private int[][] maps = new int[SIZE][SIZE];
     private int[] ranNum = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+
     /**
      * 根据通过的关卡数随机生成数独
      * @param level 通过的关卡数
@@ -48,11 +49,6 @@ public class InitMap {
                 }
             }
         }
-        int[][] games = new int[SIZE][SIZE];
-        for (int i = 0; i < SIZE; i++) {
-            System.arraycopy(maps[i], 0, games[i], 0, SIZE);
-        }
-
         System.out.println("生成数独");
         printMaps();
         maskCells(level,maps);

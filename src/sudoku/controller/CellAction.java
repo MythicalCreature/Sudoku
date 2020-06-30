@@ -293,7 +293,7 @@ public class CellAction extends JPanel implements MouseListener {
         for (int i = 0; i < SIZE; i++) {
             for (int j = 0; j < SIZE; j++) {
                 try {
-                    if (StringUtils.isEmpty(cells[i][j].getText())) {
+                    if (!StringUtils.isEmpty(cells[i][j].getText())) {
                         strings[i][j] = cells[i][j].getText();
                     } else {
                         strings[i][j] = "0";
